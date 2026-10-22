@@ -256,6 +256,60 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 #camnote:empty{display:none}
 @media (max-width:700px){#camnote{display:none}}
 
+/* Argumentos del equipo */
+#stage.final #final{pointer-events:none}
+#stage:not(.final) .argbtn{pointer-events:none}
+.argbtn{pointer-events:auto;display:inline-flex;align-items:center;gap:12px;margin-top:16px;padding:9px 20px 9px 10px;border:1px solid var(--fg);border-radius:999px;background:#000;font-weight:800;font-size:.95rem;letter-spacing:-.02em;transition:background .25s,color .25s}
+.argbtn kbd{font:500 14px var(--sans);width:30px;height:30px;border:1px solid currentColor;border-radius:50%;display:grid;place-items:center}
+.argbtn:hover{background:var(--fg);color:#000}
+#argos{position:absolute;inset:0;z-index:30;background:rgba(0,0,0,.95);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);opacity:0;visibility:hidden;transition:opacity .35s,visibility 0s .35s;overflow-y:auto;overscroll-behavior:contain;outline:none;scrollbar-width:thin}
+#argos.open{opacity:1;visibility:visible;transition:opacity .35s}
+.argbar{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 3.2vw;background:linear-gradient(#000 70%,rgba(0,0,0,0))}
+.argbar .mono{font-size:11px;color:var(--dim)}
+.argclose{display:flex;align-items:center;gap:10px;padding:8px 16px;border:1px solid var(--fg);border-radius:999px;font-size:12px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.04em;transition:background .25s,color .25s}
+.argclose:hover{background:var(--fg);color:#000}
+.argwrap{max-width:880px;margin:0 auto;padding:6px 24px 90px}
+.argwrap h2{font-weight:800;font-size:clamp(1.8rem,4.2vw,3.6rem);line-height:.98;letter-spacing:-.07em;text-wrap:balance;margin:6px 0 16px}
+.chipsrow{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chipsrow span{font:400 11px var(--mono);text-transform:uppercase;letter-spacing:.04em;border:1px solid var(--line);padding:5px 12px;border-radius:99px;color:var(--dim)}
+.intro p{color:#e4e1db;font-size:1.02rem;line-height:1.55;margin-bottom:12px}
+.disc{margin:22px 0;padding:12px 16px;border:1px dashed rgba(255,255,255,.4);border-radius:10px;font-size:.84rem;line-height:1.5;color:#ddd9d2;background:rgba(255,255,255,.04)}
+.disc b{color:#fff}
+.strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px 14px;margin:26px 0 8px}
+.who{display:flex;align-items:center;gap:10px;font-size:.82rem;font-weight:600;line-height:1.2}
+.av{width:56px;height:56px;border-radius:50%;overflow:hidden;flex:none;box-shadow:0 0 0 2px var(--c,rgba(255,255,255,.35))}
+.who .av{width:38px;height:38px}
+.pav{display:block;width:100%;height:100%}
+.asec{margin-top:46px}
+.aq{font-size:11px;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.asec h3{font-weight:800;font-size:clamp(1.3rem,2.6vw,2rem);line-height:1.02;letter-spacing:-.05em;margin:6px 0 16px;text-wrap:balance}
+.cons{display:flex;align-items:center;gap:12px;font-size:11px;color:var(--dim);margin-bottom:18px;flex-wrap:wrap}
+.cons .bar{flex:1;min-width:120px;height:6px;background:rgba(255,255,255,.14);border-radius:99px;overflow:hidden}
+.cons .bar i{display:block;height:100%;background:var(--g);border-radius:99px}
+.cons b{color:#fff;font-weight:500}
+.arg{display:flex;gap:16px;padding:16px 18px;margin-bottom:12px;border:1px solid rgba(255,255,255,.14);border-left:3px solid var(--c);border-radius:4px 14px 14px 4px;background:rgba(255,255,255,.04)}
+.arg .ab h4{font-weight:800;font-size:1.02rem;letter-spacing:-.03em;margin-bottom:6px;color:#fff}
+.arg .ab p{font-size:.95rem;line-height:1.55;color:#e8e5df}
+.syn{margin-top:16px;padding:14px 18px;border-radius:12px;background:linear-gradient(105deg,rgba(120,84,255,.22),rgba(244,79,190,.14) 55%,rgba(54,165,255,.2));border:1px solid rgba(255,255,255,.2)}
+.syn .mono{font-size:10px;color:#e4dcff}
+.syn p{margin-top:6px;font-size:.95rem;line-height:1.55;color:#fff;font-weight:500}
+.concl{margin-top:56px;padding-top:30px;border-top:1px solid var(--line)}
+.concl h3{font-weight:800;font-size:clamp(1.3rem,2.8vw,2.2rem);line-height:1.02;letter-spacing:-.05em;margin:6px 0 18px;text-wrap:balance}
+.concl p{color:#e4e1db;font-size:1rem;line-height:1.6;margin-bottom:12px}
+.idea{margin:26px 0 10px;padding:22px 24px;border-radius:14px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.05)}
+.idea .mono{font-size:10px;color:var(--dim)}
+.idea blockquote{margin-top:10px;font-weight:800;font-size:clamp(1.3rem,2.7vw,2.1rem);line-height:1.05;letter-spacing:-.05em;color:#fff;text-wrap:balance}
+.extra{margin-top:46px}
+.extra h3{font-weight:800;font-size:clamp(1.3rem,2.6vw,2rem);line-height:1.02;letter-spacing:-.05em;margin:6px 0 14px;text-wrap:balance}
+.extra p{color:#e4e1db;font-size:1rem;line-height:1.6}
+.steps3{display:grid;gap:12px;margin:18px 0}
+.st{padding:14px 18px;border:1px solid rgba(255,255,255,.16);border-left:3px solid var(--violet);border-radius:4px 14px 14px 4px;background:rgba(255,255,255,.04)}
+.st .mono{font-size:10px;color:var(--dim)}
+.st h4{font-weight:800;font-size:1.05rem;letter-spacing:-.03em;color:#fff;margin:4px 0 6px}
+.st p{font-size:.93rem;color:#e8e5df}
+.extra .closing{margin-top:6px;font-weight:600;color:#fff}
+@media (max-width:700px){.arg{flex-direction:column;gap:10px}.av{width:48px;height:48px}.argwrap{padding:4px 16px 70px}}
+
 /* Botón "atrás" */
 .back{display:none;align-items:center;gap:10px;margin-top:14px;font-size:11px;color:var(--fg);opacity:.85;transition:opacity .2s}
 .back.show{display:flex}
@@ -348,6 +402,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     <h2 id="fHead"></h2>
     <p class="team" id="fTeam"></p>
     <p class="note" id="fNote"></p>
+    <button class="argbtn" id="argBtn" style="display:none"><kbd>↑</kbd><span>Ver los argumentos del equipo</span></button>
     <p class="tally mono" id="fTally"></p>
     <div class="chips mono" id="fChips"></div>
   </div>
@@ -384,6 +439,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <g class="gavel"><path d="M150 152h26" stroke="#8a5a34" stroke-width="5" stroke-linecap="round"/><rect x="170" y="141" width="14" height="22" rx="3" fill="#6b4a2a" stroke="#f1eee8" stroke-width="1.2"/></g>
     </svg>
   </div>
+
+  <div id="argos" tabindex="-1" role="dialog" aria-label="Argumentos del equipo de UXccenture Song"></div>
 
   <button class="opt l" id="optL"><kbd>←</kbd><span class="lab"></span></button>
   <button class="opt r" id="optR"><kbd>→</kbd><span class="lab"></span></button>
@@ -448,13 +505,123 @@ const IMG={"sesgos": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAY
    Convención: izquierda = No / Inconveniente · derecha = Sí / Beneficio
    ════════════════════════════════════════════════════════════════ */
 const Q=(q,say,L,R,s,res)=>({q,say,s:s||q,res,left:{label:L[0],vote:L[1]||null,react:L[2]},right:{label:R[0],vote:R[1]||null,react:R[2]}});
-const PX=(field,say)=>{const o=Q(field,say,['Inconveniente','A'],['Beneficio','C'],field);o.tag='Debatir sin postits: ¿beneficio o inconveniente?';return o;};
+const PX=(field,say)=>{const o=Q(field,say,['Dificulta','A'],['Beneficia','C'],field);o.tag='Cómo afecta eliminar los postits en relación a...';return o;};
+
+const DEBATE_WEB={
+  title:"¿Ha llegado el fin del diseño web sin IA?",
+  intro:[
+    "El debate exploró cómo la inteligencia artificial generativa está transformando el diseño web, reduciendo los costes de producción y elevando la calidad mínima de las experiencias digitales, pero también favoreciendo una creciente homogeneización.",
+    "La discusión se articuló alrededor de una tensión fundamental: ¿seguirá siendo suficiente ofrecer experiencias digitales eficientes o la diferenciación y la memorabilidad se convertirán en las principales ventajas competitivas de las marcas?"
+  ],
+  disclaimer:"Este resumen es una simulación ficticia generada con IA. Los argumentos se atribuyen a los participantes únicamente para representar distintas perspectivas: no reflejan declaraciones ni opiniones reales. Los porcentajes de consenso son ilustrativos y representan el grado de convergencia de los argumentos simulados, no una votación real.",
+  people:{
+    guillem:{name:"Guillem Bonafont",skin:"#e8c9a8",hair:"#5a3b25",style:"short",hood:"#a100ff",bg:"#241a4d",glasses:null,accent:"#7854ff"},
+    laura:{name:"Laura Oliver",skin:"#f1cfb3",hair:"#8a3b1f",style:"long",hood:"#ff5fc8",bg:"#3b1747",glasses:null,accent:"#ff5fc8"},
+    keny:{name:"Keny Muesa",skin:"#8d5a3c",hair:"#1c1c22",style:"curly",hood:"#4eb8ff",bg:"#14344a",glasses:"#f3f1ee",accent:"#4eb8ff"},
+    andres:{name:"Andrés Belmonte",skin:"#e8d7c6",hair:"#3a3a44",style:"short",hood:"#2e2e38",bg:"#1d2a3a",glasses:"#c98a5a",accent:"#5fe0b0"},
+    anna_p:{name:"Anna Prats",skin:"#f1cfb3",hair:"#e6c36a",style:"bun",hood:"#f1eee8",bg:"#4a1f3d",glasses:null,accent:"#ffd84a"},
+    patricia:{name:"Patricia Gonzalo",skin:"#e8c9a8",hair:"#111114",style:"long",hood:"#7854ff",bg:"#1f2a4d",glasses:"#ff5fc8",accent:"#ff5fc8"},
+    anna_c:{name:"Anna Cervera",skin:"#f1cfb3",hair:"#b4532a",style:"curly",hood:"#5fe0b0",bg:"#3a2a1d",glasses:null,accent:"#7854ff"},
+    mei:{name:"Mei Xen Bertranpetit",skin:"#e8d7c6",hair:"#1c1c22",style:"bun",hood:"#ffd84a",bg:"#2c1f4a",glasses:"#f3f1ee",accent:"#4eb8ff"},
+    lola:{name:"Lola Pérez",skin:"#b9805a",hair:"#ff5fc8",style:"buzz",hood:"#d63fa5",bg:"#102d3a",glasses:null,accent:"#5fe0b0"}
+  },
+  sections:[
+    {q:"¿Nos lleva la IA a priorizar webs memorables por encima de prácticas?",consensus:78,level:"Alto",
+     args:[
+      {who:"guillem",text:"Planteó que la IA está convirtiendo las buenas prácticas del diseño web en una commodity. Si cualquier empresa puede disponer de una web visualmente correcta, accesible y funcional en cuestión de minutos, el verdadero valor del diseño se desplazará hacia la capacidad de construir experiencias reconocibles y memorables. No se trata de abandonar la usabilidad, sino de dejar de considerarla un elemento diferenciador."},
+      {who:"laura",text:"Matizó que la memorabilidad no debería confundirse con la espectacularidad visual. Una experiencia memorable también puede construirse desde la claridad, la personalidad de la marca, el tono de comunicación o la calidad de las interacciones. La diferenciación no exige necesariamente reinventar los patrones de navegación."},
+      {who:"keny",text:"Defendió que la homogeneización generada por la IA abre una oportunidad para los diseñadores capaces de romper convenciones. Cuando todas las webs se parecen, cualquier decisión creativa verdaderamente distintiva gana visibilidad. Sin embargo, advirtió que la originalidad debe responder a una intención de marca y no convertirse en un ejercicio de creatividad sin propósito."}
+     ],
+     synth:"Existe un consenso elevado en que la memorabilidad ganará importancia, aunque no necesariamente a costa de la funcionalidad. La discusión se centra en cómo diferenciarse sin comprometer los principios fundamentales de la experiencia de usuario."},
+    {q:"¿Pueden permitirse los negocios asumir los riesgos de diseñar experiencias diferentes?",consensus:55,level:"Moderado",
+     args:[
+      {who:"andres",text:"Sostuvo que las empresas no pueden sacrificar conversión en nombre de la diferenciación. En contextos donde cada interacción tiene un impacto directo en el negocio, introducir patrones poco familiares puede generar fricción y abandono. La innovación en diseño debe justificarse mediante resultados medibles, no únicamente por su capacidad de sorprender."},
+      {who:"anna_p",text:"Argumentó que el mayor riesgo para una marca podría ser precisamente no asumir ningún riesgo. En mercados saturados, una experiencia completamente convencional puede resultar eficiente a corto plazo, pero incapaz de generar preferencia o recuerdo. Propuso entender la diferenciación como una inversión estratégica cuyo retorno debe medirse también en términos de marca, no solo de conversión inmediata."},
+      {who:"patricia",text:"Introdujo una perspectiva intermedia: las empresas pueden experimentar sin comprometer sus principales recorridos de negocio. La clave estaría en identificar qué momentos de la experiencia admiten mayor expresividad y cuáles requieren máxima predictibilidad. La experimentación controlada, acompañada de investigación y validación, permitiría equilibrar innovación y resultados."}
+     ],
+     synth:"El consenso es moderado. Los participantes coinciden en que la diferenciación implica riesgos, pero discrepan sobre cuánto riesgo resulta asumible. Surge una posición compartida: proteger los recorridos críticos y experimentar allí donde la creatividad pueda aportar valor real."},
+    {q:"¿Es la mediocridad eficiente de la IA mejor negocio que crear experiencias memorables?",consensus:85,level:"Alto",
+     args:[
+      {who:"anna_c",text:"Defendió que la IA generativa democratiza el acceso al diseño de calidad y que esto representa un avance para muchos negocios. No todas las empresas necesitan experiencias excepcionales: para una gran parte del mercado, disponer de una web suficientemente buena, rápida y económica puede ser la decisión más rentable. La mediocridad entendida como estandarización no tiene por qué ser negativa."},
+      {who:"mei",text:"Señaló que la eficiencia de producción no equivale necesariamente a eficacia de negocio. Si todas las marcas utilizan los mismos patrones visuales, mensajes y estructuras, la diferenciación desaparece y la competencia se desplaza hacia el precio, la inversión publicitaria o la distribución. En ese escenario, construir una identidad memorable puede convertirse en una ventaja competitiva difícil de replicar."},
+      {who:"lola",text:"Introdujo el impacto de la agentificación de la experiencia digital. A medida que los agentes de IA comiencen a buscar, comparar y ejecutar acciones en nombre de los usuarios, muchas interacciones funcionales dejarán de producirse directamente en las webs. Esto podría reducir el valor diferencial de la interfaz tradicional y aumentar la importancia de que las marcas sean recordadas, deseadas y elegidas antes incluso de iniciar una búsqueda."}
+     ],
+     synth:"Existe un consenso alto en que la IA ofrece una ventaja evidente en costes y velocidad, pero no garantiza diferenciación competitiva. La discusión apunta a que el valor de una experiencia memorable crecerá a medida que las tareas funcionales sean delegadas a agentes inteligentes."}
+  ],
+  conclusion:{
+    head:"El diseño web sin IA generativa no ha llegado a su fin. Su valor estratégico podría estar a punto de aumentar.",
+    paras:[
+      "El debate concluyó que la IA generativa está redefiniendo el estándar de calidad del diseño web. La producción de interfaces correctas, funcionales y visualmente atractivas será cada vez más rápida, económica y accesible. Sin embargo, esta democratización también acelerará la homogeneización de las experiencias digitales.",
+      "La transformación más profunda llegará con la agentificación de la experiencia. A medida que los agentes inteligentes asuman tareas como buscar productos, comparar servicios, completar formularios o realizar compras, las interfaces perderán parte de su protagonismo como punto de contacto directo entre marcas y consumidores.",
+      "En este nuevo escenario, las empresas ya no competirán únicamente por ofrecer la navegación más eficiente, sino por ocupar un lugar privilegiado en el top of mind del consumidor. Las marcas capaces de generar reconocimiento, preferencia y vínculos emocionales tendrán más posibilidades de ser elegidas, incluso cuando la interacción funcional esté intermediada por un agente de IA.",
+      "Esto abre un nuevo recorrido para el diseño que no depende exclusivamente de la IA generativa: aquel que apuesta por la dirección creativa, la singularidad, la experimentación y la construcción de experiencias que se alejan deliberadamente de la norma.",
+      "La IA permitirá que prácticamente cualquier negocio tenga una buena web. Pero conseguir que una marca permanezca en la memoria del consumidor seguirá requiriendo una intención creativa diferencial."
+    ],
+    idea:"En un mundo donde la IA hará que todas las webs funcionen bien, el verdadero valor del diseño estará en conseguir que algunas marcas sean imposibles de olvidar."
+  }
+};
+
+const DEBATE_POSTITS={
+  title:"¿Ha llegado el fin de los post-its en el Design Thinking?",
+  intro:[
+    "El debate exploró si las dinámicas tradicionales de Design Thinking basadas en post-its, tanto físicos como digitales, siguen aportando valor en un contexto donde la inteligencia artificial puede escuchar conversaciones, identificar ideas, sintetizar argumentos y estructurar conclusiones automáticamente.",
+    "La discusión se centró en una cuestión fundamental: ¿los post-its nos ayudan realmente a pensar mejor o hemos convertido una herramienta de facilitación en un ritual que limita la creatividad y la profundidad de las conversaciones?"
+  ],
+  disclaimer:"Este resumen es una simulación ficticia generada con IA. Los argumentos atribuidos a los participantes representan perspectivas hipotéticas y no reflejan declaraciones ni opiniones reales. Los porcentajes de consenso son ilustrativos, estimados a partir de la convergencia de los argumentos ficticios, y no representan votaciones reales.",
+  people:DEBATE_WEB.people,
+  sections:[
+    {q:"¿Los post-its facilitan la ideación o fragmentan artificialmente el pensamiento?",consensus:78,level:"Alto",
+     args:[
+      {who:"guillem",text:"Cuestionó que el post-it se haya convertido prácticamente en sinónimo de Design Thinking. Argumentó que obligar a sintetizar pensamientos complejos en frases breves puede empobrecer la reflexión y favorecer ideas superficiales, fácilmente clasificables, pero no necesariamente relevantes. Con la IA capaz de registrar y estructurar conversaciones completas, defendió que el diseño puede recuperar la riqueza del debate oral sin depender de su fragmentación en notas adhesivas."},
+      {who:"laura",text:"Defendió que los post-its cumplen una función que va más allá de documentar ideas: obligan a los participantes a concretar sus pensamientos y permiten visualizar perspectivas simultáneamente. Sin embargo, reconoció que su uso sistemático puede convertir los talleres en ejercicios mecánicos donde producir muchas notas acaba siendo más importante que desarrollar buenas ideas."},
+      {who:"keny",text:"Señaló que las dinámicas de post-its suelen favorecer el pensamiento convergente y la categorización prematura. Al agrupar ideas por afinidad demasiado pronto, se corre el riesgo de eliminar contradicciones, conexiones inesperadas o propuestas difíciles de clasificar. Planteó que una conversación abierta, acompañada por una IA que preserve sus matices, podría facilitar procesos de exploración más divergentes."}
+     ],
+     synth:"Existe un consenso elevado en que los post-its son útiles para externalizar y organizar el pensamiento, pero su uso indiscriminado puede limitar la profundidad y originalidad de la ideación. La IA abre la posibilidad de separar la generación de ideas de su documentación y clasificación."},
+    {q:"¿Eliminar los post-its mejora la participación o perjudica la inteligencia colectiva?",consensus:48,level:"Bajo",
+     args:[
+      {who:"andres",text:"Advirtió que sustituir la escritura individual por conversaciones abiertas puede amplificar los sesgos de participación. En un taller oral, las personas más extrovertidas, experimentadas o jerárquicamente influyentes pueden monopolizar el debate. Los post-its, especialmente cuando se generan individualmente antes de compartirlos, garantizan un espacio de reflexión independiente que una transcripción automática no puede reemplazar."},
+      {who:"anna_p",text:"Defendió que eliminar la obligación de escribir y clasificar notas durante una sesión podría favorecer una colaboración más natural. La atención de los participantes dejaría de dividirse entre escuchar, pensar, escribir y mover elementos en un tablero. La IA asumiría la documentación, permitiendo que el grupo se concentrara en escuchar, cuestionar y construir ideas colectivamente."},
+      {who:"patricia",text:"Propuso distinguir entre eliminar los post-its y eliminar los mecanismos de participación estructurada. Argumentó que la escritura silenciosa, los turnos de intervención y las dinámicas individuales siguen siendo necesarios para evitar el pensamiento grupal. La IA puede sustituir el soporte documental, pero no la responsabilidad del facilitador de garantizar que todas las voces tengan oportunidades equivalentes de contribuir."}
+     ],
+     synth:"El consenso es bajo. Mientras algunos participantes consideran que abandonar los post-its liberaría la conversación, otros advierten que podría reducir la diversidad de perspectivas. La principal coincidencia es que la calidad de la participación depende más de cómo se facilita el debate que de la herramienta utilizada para documentarlo."},
+    {q:"¿Puede la IA sustituir los post-its sin perder calidad en el proceso de diseño?",consensus:84,level:"Alto",
+     args:[
+      {who:"anna_c",text:"Destacó el impacto en la eficiencia. Los talleres tradicionales dedican una parte considerable del tiempo a escribir notas, agruparlas, votar y trasladar los resultados a documentos posteriores. Una IA puede automatizar buena parte de estas tareas, generar síntesis estructuradas y mantener la trazabilidad de los argumentos. Esto permitiría dedicar más tiempo a investigar problemas, explorar alternativas y validar soluciones."},
+      {who:"mei",text:"Cuestionó que una síntesis generada por IA represente necesariamente la inteligencia colectiva del grupo. Los modelos pueden priorizar argumentos recurrentes, suavizar desacuerdos o transformar posiciones minoritarias en conclusiones aparentemente consensuadas. Advirtió que el verdadero riesgo no es perder los post-its, sino delegar en un algoritmo la interpretación de lo que el grupo considera importante."},
+      {who:"lola",text:"Planteó que la IA permite evolucionar desde talleres que producen tableros estáticos hacia procesos de ideación con memoria continua. Las conversaciones podrían convertirse en conocimiento consultable, conectarse con investigaciones anteriores y alimentar nuevas sesiones sin empezar desde cero. El resultado ya no sería una colección de notas adhesivas, sino una base de conocimiento dinámica que evoluciona con el proyecto."}
+     ],
+     synth:"Existe un consenso alto en que la IA puede mejorar significativamente la documentación y continuidad de los procesos de diseño. Sin embargo, los participantes consideran imprescindible mantener supervisión humana sobre las síntesis, preservar los desacuerdos y verificar que la interpretación de la IA no sustituya el criterio colectivo."}
+  ],
+  conclusion:{
+    head:"El fin de los post-its no significa el fin del Design Thinking. Puede representar la oportunidad de recuperar su propósito original: pensar colectivamente para resolver problemas complejos.",
+    paras:[
+      "El debate concluyó que los post-its han sido una herramienta extraordinariamente útil para democratizar la participación, visualizar ideas y estructurar procesos de diseño. Sin embargo, su adopción generalizada ha provocado que, en ocasiones, el método se confunda con la herramienta y que el éxito de un taller se mida por la cantidad de notas generadas en lugar de por la calidad del pensamiento producido.",
+      "La IA generativa introduce un cambio fundamental: por primera vez, documentar una conversación ya no exige interrumpirla constantemente para convertirla en elementos visuales y clasificables.",
+      "Esto permite imaginar sesiones de ideación donde las personas puedan dedicar más atención a escuchar, argumentar, contradecir, conectar ideas y profundizar en los problemas. La IA puede encargarse de registrar, sintetizar, identificar patrones y preservar el conocimiento generado.",
+      "No obstante, abandonar los post-its sin rediseñar las dinámicas de participación podría resultar contraproducente. La escritura individual, la reflexión silenciosa y la visualización compartida siguen teniendo valor cognitivo y social. La IA no garantiza por sí sola diversidad de pensamiento, igualdad de participación ni calidad de las decisiones.",
+      "Por tanto, el futuro del Design Thinking no debería consistir en sustituir automáticamente cada post-it por un resumen generado por IA, sino en diseñar nuevas dinámicas de inteligencia colectiva donde la tecnología libere a las personas de documentar para permitirles pensar mejor.",
+      "En este nuevo paradigma, el facilitador deja de ser principalmente quien organiza ideas en un tablero y pasa a convertirse en quien diseña las condiciones para que surjan mejores conversaciones, se cuestionen los consensos y se construyan soluciones originales."
+    ],
+    idea:"El Design Thinking no necesita más post-its. Necesita mejores conversaciones. Y si la IA puede encargarse de documentarlas, quizá podamos volver a dedicar nuestro tiempo a lo verdaderamente importante: pensar."
+  },
+  extra:{
+    kicker:"Consecuencias prácticas",
+    title:"Del taller tradicional al taller aumentado por IA",
+    intro:"Como consecuencia práctica del debate, se identificaron tres cambios en la forma de diseñar y facilitar sesiones de ideación:",
+    items:[
+      {h:"De capturar ideas a provocar conversaciones",p:"Priorizar la profundidad del intercambio frente al número de aportaciones registradas."},
+      {h:"De agrupar post-its a explorar conexiones",p:"Utilizar la IA para identificar relaciones, contradicciones e hipótesis, sin imponer consensos artificiales."},
+      {h:"De talleres aislados a conocimiento continuo",p:"Transformar cada conversación en conocimiento reutilizable, verificable y conectado con el resto del proceso de diseño."}
+    ],
+    closing:"La conclusión no es que debamos prohibir los post-its. Es que deberíamos dejar de utilizarlos por inercia. Porque llenar un Miro de cuadraditos de colores nunca ha sido, por sí solo, una demostración de pensamiento innovador."
+  }
+};
 
 const DILEMMAS=[
 { id:'sesgos', date:'2025-12-28',
-  title:'¿Diseñar en base a sesgos cognitivos limita la innovación?',
-  accused:'Diseñar en base a sesgos cognitivos',
-  obj:'diseñar en base a sesgos cognitivos', team:'A',
+  title:'¿Ha llegado el fin del diseño basado en sesgos cognitivos?',
+  accused:'El diseño basado en sesgos cognitivos',
+  obj:'el diseño basado en sesgos cognitivos', team:'A',
   teamNote:'Para el equipo, los sesgos son un punto de partida, no un techo: innovar es saber cuándo apoyarse en ellos y cuándo romperlos con intención.',
   steps:[
     Q('Si todos diseñamos con los mismos sesgos, ¿acabamos haciendo todos lo mismo?','Anclaje, escasez, prueba social… el repertorio es corto y lo conoce todo el mundo.',['No','A','Variedad de contexto, variedad de resultados. Eso dices.'],['Sí','C','Un catálogo compartido tiende al calco.'],'Todos igual'),
@@ -464,9 +631,9 @@ const DILEMMAS=[
     Q('¿Son los mismos sesgos en todas las culturas?','Si no son universales, el atajo deja de ser fiable.',['No','C'],['Sí','A'],'Universales')
   ]},
 { id:'localization', date:'2026-01-23',
-  title:'Localization design: ¿priorizamos escalabilidad o adaptabilidad?',
-  accused:'Priorizar la escalabilidad en localization',
-  obj:'priorizar la escalabilidad en localization', team:'C',
+  title:'¿Ha llegado el fin de los portales deslocalizados?',
+  accused:'Los portales deslocalizados',
+  obj:'los portales deslocalizados', team:'C',
   teamNote:'Para el equipo, escalar sin adaptar sale caro. Apuesta por sistemas escalables que dejen espacio explícito y gobernado a lo local.',
   steps:[
     Q('¿Una plantilla global ahorra más de lo que cuesta no entender a cada mercado?','Una sola base para veinte países suena a eficiencia pura.',['No','C'],['Sí','A'],'Plantilla global'),
@@ -476,9 +643,9 @@ const DILEMMAS=[
     Q('¿Escalar rápido hoy compensa rehacer mañana?','Toda deuda de adaptación se paga con intereses.',['No','C'],['Sí','A'],'Escalar o rehacer')
   ]},
 { id:'agente', date:'2026-03-01',
-  title:'¿Debemos diseñar con el usuario o el agente en el centro?',
-  accused:'Poner al usuario en el centro del diseño',
-  obj:'poner al usuario en el centro del diseño', team:'A',
+  title:'¿Ha llegado el fin del diseño centrado en el humano?',
+  accused:'El diseño centrado en el humano',
+  obj:'el diseño centrado en el humano', team:'A',
   teamNote:'Para el equipo, la persona sigue en el centro: el agente es una herramienta que actúa en su nombre y debe ser transparente y auditable.',
   steps:[
     Q('Si un agente de IA hace la tarea por la persona, ¿sigue siendo ella nuestro usuario?','Delegar cambia quién toca la interfaz, pero ¿quién vive las consecuencias?',['No','C'],['Sí','A'],'Sigue siendo usuario'),
@@ -488,15 +655,15 @@ const DILEMMAS=[
     Q('¿Medimos el éxito por la tarea completada o por la persona satisfecha?','Un agente puede cumplir la tarea y aun así dejar a alguien incómodo.',['Tarea completada','C'],['Persona satisfecha','A'],'Qué medimos')
   ]},
 { id:'extremos', date:'2026-10-23',
-  title:'¿Debemos condenar a muerte el diseño web sin IA?',
+  title:'¿Ha llegado el fin del diseño web sin IA?',
   accused:'El diseño web sin IA',
-  obj:'el diseño web sin IA', team:'A',
+  obj:'el diseño web sin IA', team:'A', debate:DEBATE_WEB,
   teamNote:'Para el equipo, la IA no condena el diseño web hecho por personas: lo que se juega es que la web siga siendo memorable y pensada para humanos.',
   steps:[
     Q('Esta web es real. ¿Crees que esta web se ha generado con IA generativa?','Navega con calma: haz scroll, haz clic… ¿te suena a máquina o a persona?',['No',''],['Sí',''],'Web 1: ¿con IA?',{type:'frame',url:'https://arngren.net/'}),
-    Q('Esta web también es real. ¿Crees que se ha generado con IA generativa?','Otra más. Fíjate en la estructura, el tono y los detalles.',['No',''],['Sí',''],'Web 2: ¿con IA?',{type:'frame',url:'https://futrfund.app/'}),
-    Q('¿Qué web te ha generado mayor stickiness of the mind?','Quédate con la sensación, no con el análisis. ¿Cuál se te ha pegado a la cabeza?',['La primera','A'],['La segunda','C'],'La más pegajosa',{type:'shots',items:[{name:'arngren.net',url:'https://arngren.net/'},{name:'futrfund.app',url:'https://futrfund.app/'}]}),
-    Q('¿Cuál crees que tiene mayor probabilidad de fracasar a la hora de generar negocio?','Piensa en las ventas: ¿cuál de las dos tiene más papeletas de quedarse sin clientes?',['La primera','C'],['La segunda','A'],'Quién fracasa antes',{type:'shots',items:[{name:'arngren.net',url:'https://arngren.net/'},{name:'futrfund.app',url:'https://futrfund.app/'}]}),
+    Q('Esta web también es real. ¿Crees que se ha generado con IA generativa?','Otra más. Fíjate en la estructura, el tono y los detalles.',['No',''],['Sí',''],'Web 2: ¿con IA?',{type:'frame',url:'https://hotflingdxb.com/'}),
+    Q('¿Qué web te ha generado mayor stickiness of the mind?','Quédate con la sensación, no con el análisis. ¿Cuál se te ha pegado a la cabeza?',['La primera','A'],['La segunda','C'],'La más pegajosa',{type:'shots',items:[{name:'arngren.net',url:'https://arngren.net/'},{name:'hotflingdxb.com',url:'https://hotflingdxb.com/'}]}),
+    Q('¿Cuál crees que tiene mayor probabilidad de fracasar a la hora de generar negocio?','Piensa en las ventas: ¿cuál de las dos tiene más papeletas de quedarse sin clientes?',['La primera','C'],['La segunda','A'],'Quién fracasa antes',{type:'shots',items:[{name:'arngren.net',url:'https://arngren.net/'},{name:'hotflingdxb.com',url:'https://hotflingdxb.com/'}]}),
     Q('¿Crees que ejemplos de reverse engineering con IA como ArtCraft serán cada vez más habituales?','Esta herramienta reconstruye lo que ya existe con ayuda de IA. Explórala.',['No',''],['Sí',''],'Reverse engineering',{type:'frame',url:'https://getartcraft.com/apps'}),
     Q('Entonces… ¿estás de acuerdo con la siguiente afirmación?','Léela despacio. Es una afirmación contundente: ¿la suscribes?',['No','A'],['Sí','C'],'IA y fracaso',{type:'quote',text:'La IA ha eliminado el fracaso en el diseño web'}),
     Q('Por tanto… ¿cuál de estos objetivos crees que deben perseguir la mayoría de webs que se generen en el futuro?','Si todo se puede generar, ¿qué merece la pena perseguir?',['Ser memorables','A'],['Ser prácticas','C'],'Memorables o prácticas'),
@@ -507,7 +674,7 @@ const DILEMMAS=[
 { id:'postits', date:'2026-10-23', open:true,
   title:'¿Ha llegado el fin de los postits en diseño?',
   accused:'Las dinámicas con postits',
-  obj:'las dinámicas con postits', team:'C',
+  obj:'las dinámicas con postits', team:'C', debate:DEBATE_POSTITS,
   teamNote:'Para el equipo, una conversación bien facilitada y resumida con IA captura más matices que un muro de notas, siempre que alguien valide el resumen.',
   steps:[
     Q('¿Confiamos en el resumen que hace la IA de nuestras conversaciones?','Imagina un workshop sin una sola nota adhesiva, física o digital: todo se dice en voz alta y una IA lo resume.',['No','','Desconfías. Tocará revisar cada resumen a mano.'],['Sí','','Confías. Atrevido… y cómodo.'],'Confiar en el resumen IA'),
@@ -590,6 +757,7 @@ function openCase(id){
 }
 function closeCase(){
   stage.classList.remove('open');
+  closeArgs();
   clearInterval(typeT);
   stopCam();frontView=false;avEl.classList.remove('front');
   setTimeout(()=>{if(!stage.classList.contains('open'))cancelAnimationFrame(raf)},520);
@@ -702,6 +870,58 @@ document.addEventListener('visibilitychange',()=>{
 });
 addEventListener('pagehide',stopCam);
 
+/* ── Argumentos del equipo (resumen del debate) ── */
+let argosOpen=false;
+function personAvatar(p){
+  const h=p.hair,sk=p.skin;
+  const back=p.style==='long'?'<rect x="17" y="15" width="30" height="36" rx="14" fill="'+h+'"/>':(p.style==='curly'?'<circle cx="32" cy="26" r="18" fill="'+h+'"/>':'');
+  const bun=p.style==='bun'?'<circle cx="32" cy="12.5" r="5.5" fill="'+h+'"/>':'';
+  const cap=p.style==='buzz'
+    ?'<path d="M20 28c0-8 5-12 12-12s12 4 12 12c-3-3.5-7-5-12-5s-9 1.5-12 5z" fill="'+h+'"/>'
+    :'<path d="M19 30c-1.5-11 5-17.5 13-17.5S46.5 19 45 30c-2.5-5-7-7-13-7s-10.5 2-13 7z" fill="'+h+'"/>';
+  const gl=p.glasses?'<g fill="none" stroke="'+p.glasses+'" stroke-width="1.3"><circle cx="26.5" cy="31" r="4.6"/><circle cx="37.5" cy="31" r="4.6"/><path d="M31 31h2"/></g>':'';
+  return '<svg class="pav" viewBox="0 0 64 64" role="img" aria-label="Avatar de '+p.name+'"><rect width="64" height="64" fill="'+p.bg+'"/>'
+    +back+bun
+    +'<path d="M7 64c0-12 10-17.5 25-17.5S57 52 57 64z" fill="'+p.hood+'"/>'
+    +'<path d="M27 64l5-9 5 9z" fill="rgba(0,0,0,.25)"/>'
+    +'<rect x="28" y="42" width="8" height="8" rx="3" fill="'+sk+'"/>'
+    +'<circle cx="32" cy="31" r="13" fill="'+sk+'"/>'+cap
+    +'<circle cx="26.5" cy="31" r="1.5" fill="#2a2a30"/><circle cx="37.5" cy="31" r="1.5" fill="#2a2a30"/>'
+    +'<path d="M27.5 37.5q4.5 4 9 0" fill="none" stroke="#8a4a3a" stroke-width="1.5" stroke-linecap="round"/>'+gl+'</svg>';
+}
+function buildArgs(db){
+  const P=db.people;
+  const strip=Object.values(P).map(p=>'<div class="who" style="--c:'+p.accent+'"><div class="av">'+personAvatar(p)+'</div><span>'+p.name+'</span></div>').join('');
+  const secs=db.sections.map((s,i)=>{
+    const args=s.args.map(a=>{const p=P[a.who];return '<article class="arg" style="--c:'+p.accent+'"><div class="av">'+personAvatar(p)+'</div><div class="ab"><h4>'+p.name+'</h4><p>'+a.text+'</p></div></article>'}).join('');
+    return '<section class="asec"><div class="aq mono">Pregunta '+(i+1)+' de '+db.sections.length+'</div><h3>'+s.q+'</h3>'
+      +'<div class="cons mono"><span>Consenso estimado</span><div class="bar"><i style="width:'+s.consensus+'%"></i></div><b>'+s.consensus+'% · '+s.level+'</b></div>'
+      +args+'<div class="syn"><span class="mono">Síntesis</span><p>'+s.synth+'</p></div></section>';
+  }).join('');
+  const c=db.conclusion;
+  return '<div class="argbar"><span class="mono">Argumentos del equipo de UXccenture Song</span><button class="argclose" id="argClose"><span>Esc</span> Cerrar</button></div>'
+    +'<div class="argwrap"><div class="aq mono">Resumen del debate</div><h2>'+db.title+'</h2>'
+    +'<div class="chipsrow"><span>'+Object.keys(P).length+' participantes</span><span>'+db.sections.length+' preguntas</span><span>1 conclusión</span></div>'
+    +'<div class="intro">'+db.intro.map(x=>'<p>'+x+'</p>').join('')+'</div>'
+    +'<div class="disc"><b>Simulación.</b> '+db.disclaimer+'</div>'
+    +'<div class="strip">'+strip+'</div>'
+    +secs
+    +'<section class="concl"><div class="aq mono">Conclusión del debate</div><h3>'+c.head+'</h3>'+c.paras.map(x=>'<p>'+x+'</p>').join('')
+    +'<div class="idea"><span class="mono">Idea final del debate</span><blockquote>«'+c.idea+'»</blockquote></div></section>'
+    +(db.extra?'<section class="extra"><div class="aq mono">'+db.extra.kicker+'</div><h3>'+db.extra.title+'</h3><p>'+db.extra.intro+'</p><div class="steps3">'+db.extra.items.map((it,i)=>'<div class="st"><span class="mono">0'+(i+1)+'</span><h4>'+it.h+'</h4><p>'+it.p+'</p></div>').join('')+'</div><p class="closing">'+db.extra.closing+'</p></section>':'')
+    +'<div class="disc" style="margin-top:34px"><b>Recuerda:</b> '+db.disclaimer+'</div></div>';
+}
+function openArgs(){
+  if(!D||!D.debate||phase!=='final')return;
+  const el=$('#argos');
+  if(!el.dataset.for||el.dataset.for!==D.id){el.innerHTML=buildArgs(D.debate);el.dataset.for=D.id;$('#argClose').onclick=closeArgs}
+  el.scrollTop=0;el.classList.add('open');argosOpen=true;el.focus({preventScroll:true});
+}
+function closeArgs(){
+  const el=$('#argos');el.classList.remove('open');argosOpen=false;
+}
+$('#argBtn').onclick=openArgs;
+
 function openTrial(){
   if(phase!=='idle'||!steps||!steps[si]||!steps[si].up)return;
   phase='travel';
@@ -729,6 +949,7 @@ function updateBack(){
 }
 function leaveFinal(){
   stopCam();
+  closeArgs();
   stage.classList.remove('final','agree');
   avEl.classList.remove('cheer','sad');
   $('#team').classList.remove('cheer');
@@ -757,13 +978,22 @@ function confetti(){
     s.style.cssText='left:'+(Math.random()*100)+'%;background:'+cols[i%5]+';--t:'+(2.6+Math.random()*2.4).toFixed(2)+'s;--d:'+(.5+Math.random()*1.6).toFixed(2)+'s;--r:'+(Math.random()*720-360).toFixed(0)+'deg;width:'+(6+Math.random()*6).toFixed(0)+'px;height:'+(10+Math.random()*8).toFixed(0)+'px';
     c.appendChild(s)}
 }
-/* Compañeros de UXccenture Song (variaciones del mismo avatar) */
+/* Compañeros de UXccenture Song: de cara, con la misma cara que el avatar central y distinto color de pelo */
 function mateSVG(o){
   const st='stroke="#f3f1ee" stroke-width="1.3"';
-  const hair=o.style==='big'
-    ?'<circle cx="70" cy="32" r="34" fill="'+o.hair+'" '+st+'/>'
-    :'<path d="M44 38c-2-22 14-30 26-30s28 8 26 30c-2-8-8-12-26-12s-24 4-26 12z" fill="'+o.hair+'" '+st+'/><path d="M45 40c0 14 6 20 12 22l13 3 13-3c6-2 12-8 12-22-3 6-7 8-25 8s-22-2-25-8z" fill="'+o.hair+'" '+st+'/>'+(o.style==='bun'?'<circle cx="70" cy="9" r="9" fill="'+o.hair+'" '+st+'/>':'');
-  const note=o.note?'<g transform="rotate('+(o.rot||6)+' 70 118)"><rect x="56" y="104" width="30" height="30" fill="'+o.note+'"/><path d="M61 114h20M61 120h14M61 126h18" stroke="#00000066" stroke-width="1.6" stroke-linecap="round"/></g>':'';
+  const big=o.style==='big',short=o.style==='short';
+  const rx=big?34:(short?27:29),ry=big?34:(short?28:30),cy=big?34:36;
+  const hair=(o.style==='bun'?'<circle cx="70" cy="9" r="9" fill="'+o.hair+'" '+st+'/>':'')
+    +'<ellipse cx="70" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="'+o.hair+'" '+st+'/>';
+  const g=o.glass||'#c98a5a';
+  const face='<circle cx="70" cy="40" r="25" fill="'+o.skin+'"/>'
+    +'<circle cx="60" cy="40" r="7.5" fill="none" stroke="'+g+'" stroke-width="1.6"/><circle cx="80" cy="40" r="7.5" fill="none" stroke="'+g+'" stroke-width="1.6"/><path d="M67.5 40h5" stroke="'+g+'" stroke-width="1.6"/>'
+    +'<circle cx="60" cy="40" r="2.2" fill="#2a2a30"/><circle cx="80" cy="40" r="2.2" fill="#2a2a30"/>'
+    +'<path d="M59 51q11 11 22 0z" fill="#8a2d3b" stroke="#8a2d3b" stroke-width="1.2" stroke-linejoin="round"/>';
+  const front='<path d="M50 72q20 30 40 0" fill="'+o.hood2+'"/><path d="M70 90v76" stroke="'+o.hood2+'" stroke-width="2.2"/>'
+    +'<path d="M58 86c-2 10-3 18-3 26M82 86c2 10 3 18 3 26" stroke="#f3f1ee" stroke-width="1.6" stroke-linecap="round" fill="none"/>'
+    +'<circle cx="55" cy="114" r="2.2" fill="#f3f1ee"/><circle cx="85" cy="114" r="2.2" fill="#f3f1ee"/>'
+    +'<g fill="#f3f1ee" stroke="'+o.hood2+'" stroke-width="1"><circle cx="70" cy="104" r="4"/><circle cx="70" cy="126" r="4"/><circle cx="70" cy="148" r="4"/></g>';
   const pants=o.pants||'#232327';
   return '<svg class="fig" viewBox="0 0 140 260" aria-hidden="true"><ellipse cx="70" cy="252" rx="42" ry="6" fill="#fff" opacity=".12"/>'
   +'<g class="legR"><rect x="72" y="150" width="19" height="90" rx="9" fill="'+pants+'" stroke="#f3f1ee" stroke-width="1.5"/><rect x="69" y="234" width="26" height="14" rx="7" fill="#f3f1ee"/></g>'
@@ -771,15 +1001,14 @@ function mateSVG(o){
   +'<g class="body">'
   +'<g class="armL"><rect x="22" y="84" width="17" height="68" rx="8.5" fill="'+o.hood2+'"/><circle cx="30.5" cy="156" r="8" fill="'+o.skin+'"/></g>'
   +'<g class="armR"><rect x="101" y="84" width="17" height="68" rx="8.5" fill="'+o.hood2+'"/><circle cx="109.5" cy="156" r="8" fill="'+o.skin+'"/></g>'
-  +'<path d="M34 84c0-9 10-14 36-14s36 5 36 14l-3 76c0 4-4 6-8 6H45c-4 0-8-2-8-6z" fill="'+o.hood+'"/>'
-  +'<path d="M45 74c8-8 42-8 50 0-6 10-44 10-50 0z" fill="'+o.hood2+'"/>'+note
-  +'<rect x="63" y="58" width="14" height="16" rx="5" fill="'+o.skin+'"/><circle cx="70" cy="40" r="25" fill="'+o.skin+'"/>'+hair+'</g></svg>';
+  +'<path d="M34 84c0-9 10-14 36-14s36 5 36 14l-3 76c0 4-4 6-8 6H45c-4 0-8-2-8-6z" fill="'+o.hood+'"/>'+front
+  +'<rect x="63" y="58" width="14" height="16" rx="5" fill="'+o.skin+'"/>'+hair+face+'</g></svg>';
 }
 const MATES=[
-  {hood:'#ff5fc8',hood2:'#d63fa5',skin:'#b9805a',hair:'#1c1c22',style:'big',note:'#7ee0ff',rot:-5,md:'.9s',jd:'0s'},
-  {hood:'#4eb8ff',hood2:'#2f94dd',skin:'#f1cfb3',hair:'#6b4a2a',style:'short',note:'#ff9ad8',rot:8,md:'1.05s',jd:'.25s'},
-  {hood:'#f1eee8',hood2:'#cfcbc3',skin:'#8d5a3c',hair:'#111114',style:'bun',note:'#ffd84a',rot:4,md:'1.2s',jd:'.4s'},
-  {hood:'#2e2e38',hood2:'#202028',skin:'#e8c9a8',hair:'#c9a46b',style:'short',note:'#ff5fc8',rot:-8,md:'1.35s',jd:'.15s'}
+  {hood:'#f1eee8',hood2:'#cfcbc3',skin:'#b9805a',hair:'#ff5fc8',glass:'#3a3a44',style:'big',md:'.9s',jd:'0s'},
+  {hood:'#2e2e38',hood2:'#202028',skin:'#f1cfb3',hair:'#4eb8ff',glass:'#c98a5a',style:'short',md:'1.05s',jd:'.25s'},
+  {hood:'#ff5fc8',hood2:'#d63fa5',skin:'#8d5a3c',hair:'#ffd84a',glass:'#f3f1ee',style:'bun',md:'1.2s',jd:'.4s'},
+  {hood:'#4eb8ff',hood2:'#2f94dd',skin:'#e8c9a8',hair:'#5fe0b0',glass:'#7854ff',style:'short',md:'1.35s',jd:'.15s'}
 ];
 $('#team').innerHTML=MATES.map((o,i)=>'<div class="mate m'+(i+1)+'" style="--md:'+o.md+';--jd:'+o.jd+'">'+mateSVG(o)+'</div>').join('');
 function updateBalance(){
@@ -799,6 +1028,7 @@ function showFinal(){
   const t=$('#fTeam');t.className='team '+(agree?'agree':'disagree');
   t.textContent=agree?'El equipo de UXccenture Song está contigo.':'El equipo de UXccenture Song discrepa contigo.';
   $('#fNote').textContent=D.teamNote;
+  $('#argBtn').style.display=D.debate?'inline-flex':'none';
   $('#fTally').textContent='Tu sentencia: '+votes.C+' argumentos a favor de la condena y '+votes.A+' a favor de la absolución.';
   $('#fChips').innerHTML=path.map(p=>`<span class="chip">${p.s}: <b>${p.a}</b></span>`).join('');
   [...$('#ticks').children].forEach(t=>t.className='done');
@@ -827,11 +1057,12 @@ $('#optU').onclick=openTrial;
 
 addEventListener('keydown',e=>{
   if(stage.classList.contains('open')){
+    if(argosOpen){if(e.key==='Escape'){e.preventDefault();closeArgs()}return}
     if(e.key==='Escape'){closeCase();return}
     if(e.key==='ArrowLeft'){e.preventDefault();side('left')}
     else if(e.key==='ArrowRight'){e.preventDefault();side('right')}
     else if(e.key==='ArrowDown'){e.preventDefault();back()}
-    else if(e.key==='ArrowUp'){e.preventDefault();openTrial()}
+    else if(e.key==='ArrowUp'){e.preventDefault();if(phase==='final'){if(D.debate)openArgs()}else openTrial()}
     else if((e.key==='r'||e.key==='R')&&phase==='final')openCase(D.id);
     return;
   }
@@ -841,7 +1072,7 @@ addEventListener('keydown',e=>{
 });
 let tx=0,ty=0;
 stage.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
-stage.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.3)side(dx<0?'right':'left');else if(dy>70&&Math.abs(dx)<40)back();else if(dy<-70&&Math.abs(dx)<40)openTrial()});
+stage.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.3)side(dx<0?'right':'left');else if(dy>70&&Math.abs(dx)<40)back();else if(dy<-70&&Math.abs(dx)<40){if(phase==='final'){if(D.debate)openArgs()}else openTrial()}});
 
 /* ───────── Render del camino en primera persona ───────── */
 function mkCity(seed){let r=seed*9301+49297;const rnd=()=>{r=(r*9301+49297)%233280;return r/233280};const a=[];let x=0;while(x<3400){const w=40+rnd()*90,h=20+rnd()*130;a.push([x,w,h]);x+=w+rnd()*34}return{a,T:x}}
